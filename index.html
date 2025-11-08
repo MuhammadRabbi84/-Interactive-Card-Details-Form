@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+
+  <main>
+
+    <div class="main-container">
+      <div class="bg-main">
+        <img src="images/bg-main-mobile.png" alt="mobile-bg" class="mobile-bg bg-image">
+        <img src="images/bg-main-desktop.png" alt="desktop-bg" class="desktop-bg hidden bg-image">
+      </div>
+
+      <div class="card-container ds-flex">
+
+        <section class="card-section">
+          <div class="card-back">
+            <span class="cvc" id="backCardCvc">000</span>
+            <img src="images/bg-card-back.png" alt="card-back" class="card back_card-image">     
+          </div>
+
+          <div class="card-front">
+            <div class="card-info card ds-flex">
+              <img src="images/card-logo.svg" alt="card-logo" class="card-logo">
+              <p class="card-number" id="frontCardNum">0000 0000 0000 0000</p>
+
+              <div class="card-bottom ds-flex">
+                <p class="card-name" id="frontCardName">Jane Appleseed</p>
+                <p class="expire-date"><span class="date" id="frontCardMonth">00</span>/<span class="year" id="frontCardYear">00</span></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="form-section">
+          <form class="form" id="form" novalidate>
+
+            <label for="cardholderName">Cardholder Name</label>
+            <input type="text" name="cardholder_name" id="cardholderName" placeholder="e.g. Jane Appleseed" maxlength="20"> 
+            <p class="error-msg">Can't be blank.</p>
+
+            <label for="cardNumber">Card Number</label>
+            <input type="text" name="cardNumber" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000" inputmode="numeric" maxlength="16">
+            <p class="error-msg">Can't be blank.</p>
+
+            <div class="input-container ds-flex">
+
+              <fieldset class="expire_date-group">
+                <legend>Exp. Date (MM/YY)</legend>
+
+                <div class="expire_date-input ds-flex">
+                  <input type="text" name="mm" id="month" placeholder="MM" maxlength="2" inputmode="numeric">
+                  <p class="error-msg expire_year-error">Can't be blank.</p>
+                  <input type="text" name="yy" id="year" placeholder="YY" maxlength="2" inputmode="numeric">
+                </div>
+
+              </fieldset>
+
+              <div class="cvc-input">
+                <label for="cvcNumber">CVC</label>
+                <input type="text" name="cvc" id="cvcNumber" placeholder="e.g. 123" maxlength="3" inputmode="numeric">
+                <p class="error-msg">Can't be blank.</p>
+              </div>
+
+            </div>
+            <button class="btn submit-btn" type="submit" id="submitBtn">Confirm</button>
+          </form>
+
+          <div class="complete-state hidden">
+            <img src="images/icon-complete.svg" alt="completed">
+            <h1 class="title">Thank you!</h1>
+            <p class="description"> We've added your card details</p>
+            <button class="btn continue-btn" type="button" id="continueBtn">Continue</button>
+          </div>
+        </section>
+
+      </div>
+    </div>
+    
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://git@github.com/MuhammadRabbi84" target="_blank">Muhammad Rabbi</a>.
+    </div>
+
+  </main>
+
+  <script src="script/script.js"></script>
+
+</body>
+</html>

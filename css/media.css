@@ -1,0 +1,192 @@
+@media screen and (min-width: 23.438rem) {
+    .card-container{
+        padding-inline: 1.5rem;
+    }    
+    .bg-image{
+        height: 15.625rem;
+    }
+
+    .card{
+        width: 17.5rem;
+        height: 10rem;
+    }
+    .cvc{
+        top: 4.313rem;
+
+    }
+    .card-info{
+        top: 5.656rem;
+        padding: 1.5rem;
+    }
+    .card-number{
+        font-size: 1.25rem;
+    }
+    .form-section{
+        margin-top: 18.75rem;
+    }
+}
+
+@media screen and (min-width: 26.563rem) {
+    .card-container{
+        width: 23.438rem;
+        margin: 0 auto;
+    }  
+}
+
+@media screen and (min-width: 36rem) {
+    .bg-image{
+        height: 45dvh;
+    }
+    .card-container{
+        width: 31.25rem;
+    } 
+    .card{
+        width: 21.875rem;
+        height: 12.5rem;
+    }
+    .cvc{
+        top: 5.031rem;
+        right: 2.5rem;
+    }
+    .card-info{
+        top: 7.119rem;
+    }
+    .card-logo{
+        height: 1.875rem;
+    }
+    .card-number{
+        font-size: 1.563rem;
+        letter-spacing: 1px;
+        margin-block-end: 1rem;
+    }
+    .card-name,.expire-date{
+        letter-spacing: 1px;
+        font-size: 0.875rem;
+    }
+    .form-section{
+        margin-top: 55dvh;
+    }
+}
+
+
+@media screen and (min-width: 62rem) {
+    .main-container{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mobile-bg{
+        display: none;
+    }
+    .desktop-bg{
+        display: block;
+        width: 30vw;
+        height: 100dvh;
+        top: 0;
+        left: 0;
+    }
+
+    .card-container{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 56.25rem;
+        height: 28.125rem;
+        gap: 6.25rem;
+        margin: 0;
+        padding: 0;
+    }
+    .card-section,.form-section{
+        flex-basis: 50%;
+    }
+    .form-section{
+        margin-top: 0;
+    }
+    .back_card-image{
+        top: 14rem;
+    }
+    .card-info{
+        top: 0;
+    }
+    .card-section{
+        position: relative;
+        height: 100%;
+    }
+    .cvc{
+        top: 19.65rem;
+    }
+    .attribution{
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (min-width: 75rem) {
+    .card-container{
+        width: 68.75rem;
+    }
+    .form-section{
+        padding-inline-end: 5rem;
+    }   
+    label,legend,.error-msg{
+        font-size: 0.875rem;
+    }
+    input{
+        font-size: 1rem;
+    }
+    .error-msg{
+        font-weight: var(--fwMedium);
+    }
+    .btn{
+        padding: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover{
+        background-color: hsl(278, 94%, 30%);
+    }
+}
+
+@media screen and (min-width: 90rem) {
+    .card-container{
+        width: calc(100% - 20vw);
+        margin: 0 auto;
+        gap: 9.375rem;
+    }
+    .card{
+        width: 25rem;
+        height: 14.375rem;
+    }
+    .form-section{
+        max-width: 31.25rem;
+    } 
+    .card-info{
+        top: -2rem;
+        padding: 2rem;
+    }
+    .card-logo{
+        height: 2.5rem;
+    }
+    .card-number{
+        word-spacing: 5px;
+        font-size: 1.688rem;
+        color: var(--gray-200);
+        margin-block-end: 1.5rem;
+    }
+    .back_card-image{
+        top: 14.5rem;
+    }
+    .cvc{
+        top: 21rem;
+        right: 3rem;
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+    .expire-date,.card-name{
+        color: var(--white);
+    }
+}

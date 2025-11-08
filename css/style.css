@@ -1,0 +1,241 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --red-400 : hsl(0, 100%, 66%);  
+    --white: hsl(0, 100%, 100%);
+    --gray-200: hsl(270, 3%, 87%);
+    --gray-400: hsl(212, 12%, 71%);
+    --purple-950: hsl(278, 68%, 11%);
+    --active-input-border: hsl(249, 99%, 64%) ,hsl(278, 94%, 30%);
+    --fFamily: "Space Grotesk" ,sans-serif;
+    --fwMedium: 500;
+}
+
+html{
+    height: 100%;
+}
+body{
+    width: 100%;
+    font-family: var(--fFamily);
+}
+.hidden{
+    display: none;
+}
+.ds-flex{
+    display: flex;
+}
+.main-container{
+    position: relative;
+}
+.bg-image{
+    position: absolute;
+    width: 100%;
+    height: 35vh;
+    z-index: 1;
+}
+.card-container{
+    flex-direction: column;
+    padding: 2rem 1rem;
+    position: relative;
+    z-index: 50;
+}
+
+/* Card section */
+.card-back,
+.card-front{
+    position: relative;
+} 
+.card{
+    position: absolute;
+    height: 9.063rem;
+    width: 14.375rem;
+}
+.back_card-image{
+    top: 0; 
+    right: 0;
+}
+.cvc{
+    position: absolute;
+    top: 3.875rem;
+    right: 2rem;
+    letter-spacing: 1.5px;
+    font-weight: var(--fwMedium);
+    font-size: 0.875rem;
+    z-index: 50;
+    color: var(--white);
+}
+.card-name,
+.expire-date{
+    color: var(--gray-200);
+}
+.card-logo{
+    height: 1.563rem;
+    position: absolute;
+    top: 1.3rem;
+    z-index: 4;
+}
+.card-number{
+    font-size: 1.125rem;
+    letter-spacing: 0.5px;
+    font-weight: var(--fwMedium);
+    margin-block-end: 0.6rem;
+    color: var(--white);
+}
+.card-info{
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem;
+    background-image: url(/images/bg-card-front.png);
+    background-size: 100% 100%;
+    top: 5.125rem;
+    left: 0;
+    border-radius: 5px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+
+}
+.card-bottom{
+    justify-content: space-between;
+}
+.card-name,.expire-date{
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.75rem;
+}
+
+/* Form section  */
+.form-section{
+    margin-top: 40vh;
+}
+label,legend{
+    text-transform: uppercase;
+    color: var(--purple-950);
+    font-size: 0.75rem;
+    display: block;
+    padding-block-end: 8px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+input{
+    width: 100%;
+    padding: 10px 1rem;
+    font-size: 0.875rem;
+    font-family: var(--fFamily);
+    font-weight: var(--fwMedium);
+    color: var(--purple-950);
+    border: 1.5px solid var(--gray-200);
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s ,border-color 0.3s ease;
+}
+input:active,
+input:focus{
+    background: linear-gradient(#fff, #fff) padding-box,
+                linear-gradient(to right ,var(--active-input-border)) border-box;
+                border: 1.5px solid transparent;
+} 
+input::placeholder{
+    color: hsl(270, 2%, 78%);
+}
+.input-container{
+    gap: 8px;
+    padding-block-end: 0.5rem;
+}
+.expire_date-group{
+    border: none;
+}
+.expire_date-group,.cvc-input{
+    flex-basis: 50%;
+}
+.expire_date-input{
+    gap: 8px;
+    position: relative;
+}
+
+.expire_year-error{
+    position: absolute;
+    top: 100%;
+}
+.error-msg{
+    color: var(--red-400);
+    font-size: 0.75rem;
+    font-weight: var(--fwMedium);
+    padding: 0.4rem 0 1rem 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+input.show_error{
+    border-color: var(--red-400);
+}
+input.show_error + .error-msg{
+    opacity: 1;
+}
+.btn{
+    background-color: var(--purple-950);
+    color: var(--white);
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 0.938rem;
+    font-weight: var(--fwMedium);
+    border: none;
+    outline: none;
+}
+
+/* Complete state  */
+.form-section.show-complete .form{
+    display: none;
+}
+.form-section.show-complete .complete-state{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block-start: 1rem;
+}
+.complete-state img{
+    height: 3.75rem;
+    width: 3.75rem;
+}
+.title{
+    font-weight: var(--fwMedium);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    padding-block-start: 1.5rem;
+    color: var(--purple-950);
+}
+.description{
+    padding-block-start: 0.4rem;
+    color: var(--gray-200);
+    font-weight: var(--fwMedium);
+    color: hsl(260, 2%, 71%);
+}
+.continue-btn{
+    margin-block-start: 2rem;
+}
+
+
+/* Attribution  */
+.attribution {
+    font-size: 0.75rem;
+    color: var(--purple-950);
+    padding: 1rem 2rem;
+    display: none;
+}
+.attribution a {
+    color: var(--red-400);
+}
+
+
+/* Prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after{
+        transition: none !important;
+    }  
+}
