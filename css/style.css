@@ -86,7 +86,7 @@ body{
     flex-direction: column;
     justify-content: flex-end;
     padding: 1rem;
-    background-image: url(./images/bg-card-front.png);
+    background-image: url(../images/bg-card-front.png);
     background-size: 100% 100%;
     top: 5.125rem;
     left: 0;
