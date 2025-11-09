@@ -216,7 +216,7 @@ input.show_error + .error-msg{
 
 /* Attribution  */
 .attribution {
-    font-size: 0.75rem;
+    font-size: 0.76rem;
     color: var(--purple-950);
     padding: 1rem 2rem;
     display: none;
